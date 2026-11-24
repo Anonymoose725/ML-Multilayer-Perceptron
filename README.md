@@ -178,7 +178,6 @@ Validation and test accuracy are taken at the best-validation epoch. Pre-trainin
 
 #### 10. Error analysis (confusion matrix)
 
-<!-- TODO: confirm which model produced this matrix before publishing (see note in chat) -->
 A 10×10 confusion matrix on the FashionMNIST test set (89.15% overall accuracy) shows where the errors concentrate:
 
 - Easy classes: Trouser (976/1000), Bag (970), Ankle boot (965), Sandal (961), Sneaker (955).
@@ -216,12 +215,15 @@ Errors cluster among upper-body garments with similar silhouettes, which motivat
 ├── notebooks/
 │   └── image_classification.ipynb
 ├── src/
+│   ├── cnn.py
+│   ├── config.py
 │   ├── mlp.py
 │   ├── optimizer.py
-│   ├── preprocessing.py
-│   ├── cnn.py
-│   ├── pretrained.py
-│   └── evaluation.py
+│   ├── plotting.py
+|   ├── preprocessing.py
+|   ├── pretrained.py
+|   ├── training.py
+│   └── tuning.py
 └── docs/
     ├── report.pdf
     └── figures/
