@@ -3,8 +3,11 @@
 An applied machine learning project that builds a multilayer perceptron (MLP) from scratch in NumPy, trains it on FashionMNIST, and runs a systematic set of experiments on depth, activations, regularization, momentum, normalization, and data augmentation. The best MLP is then compared against a PyTorch CNN and a frozen, ImageNet-pretrained ResNet-18, which is also tested on CIFAR-10 to study when transfer learning helps.
 
 **Course:** COMP 551 – Applied Machine Learning
+
 **Institution:** McGill University
+
 **Project:** Mini Project 3 – Classification of Image Data with MLPs and CNNs
+
 **Authors:** Ethan Gat, Anto Catanzaro, Marc Saliba
 
 ---
@@ -176,15 +179,6 @@ CIFAR-10 (45,000 / 5,000 / 10,000 train / validation / test) with the same froze
 
 Validation and test accuracy are taken at the best-validation epoch. Pre-training gives +7.7 points over scratch on CIFAR-10 and −2.5 points on FashionMNIST. CIFAR-10 contains natural colour objects that overlap with ImageNet concepts, while centered, grayscale, low-resolution clothing does not. The scratch CNN also overfits heavily on CIFAR-10.
 
-#### 10. Error analysis (confusion matrix)
-
-A 10×10 confusion matrix on the FashionMNIST test set (89.15% overall accuracy) shows where the errors concentrate:
-
-- Easy classes: Trouser (976/1000), Bag (970), Ankle boot (965), Sandal (961), Sneaker (955).
-- Hard class: Shirt, with only 680/1000 correct, mostly confused with T-shirt/top (143), Pullover (84), and Coat (56).
-- T-shirt/top is most often mistaken for Shirt (100), and Coat for Pullover (92).
-
-Errors cluster among upper-body garments with similar silhouettes, which motivates models that capture local spatial structure.
 
 ## Key Takeaways
 
